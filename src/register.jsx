@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useSelector } from 'react-redux';
 import "./App.css";
 
 
 
 const Register = () => {
+  const darkMode = useSelector(state => state.darkMode);
   const [showToast, setShowToast] = useState({ message: "", type: "" });
   const [password, setPassword] = useState("");
   const [retypePassword, setRetypePassword] = useState("");
@@ -67,14 +69,14 @@ const Register = () => {
 
   return (
     <div className="login-background  bg-gray-900 flex items-center justify-center min-h-screen overflow-auto">
-      <form className="login-container  w-full max-w-2xl p-16 bg-gray-800 shadow-2xl rounded-xl animate-loginCard-slideFadeIn">
-        <h2 className="text-3xl font-bold text-center tracking-widest text-white">
+      <form className={`login-container  w-full max-w-2xl p-16 bg-gray-800 shadow-2xl rounded-xl animate-loginCard-slideFadeIn  ${darkMode ? 'dark:bg-darkSecondary dark:text-darkText' : 'bg-white text-black'}`}>
+        <h2 className={`${darkMode ? 'text-white' : 'text-purple-900'} text-3xl font-bold text-center tracking-widest `}>
           SIGNUP
         </h2>
 
         <label
           htmlFor="firstname"
-          className="text-xl font-semibold text-center tracking-wider text-white"
+          className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold text-center tracking-wider `}
         >
           First Name
         </label>
@@ -91,7 +93,7 @@ const Register = () => {
 
         <label
           htmlFor="middlename"
-          className="text-xl font-semibold text-center tracking-wider text-white"
+          className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold text-center tracking-wider `}
         >
           Middle Name
         </label>
@@ -108,7 +110,7 @@ const Register = () => {
 
         <label
           htmlFor="lastname"
-          className="text-xl font-semibold text-center tracking-wider text-white"
+          className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold text-center tracking-wider `}
         >
           Last Name
         </label>
@@ -125,7 +127,7 @@ const Register = () => {
 
         <label
           htmlFor="email"
-          className="text-xl font-semibold text-center tracking-wider text-white"
+          className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold text-center tracking-wider `}
         >
           Email
         </label>
@@ -142,7 +144,7 @@ const Register = () => {
 
         <label
           htmlFor="username"
-          className="text-xl font-semibold text-center tracking-wider text-white"
+          className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold text-center tracking-wider `}
         >
           Username
         </label>
@@ -159,7 +161,7 @@ const Register = () => {
 
         <label
           htmlFor="password"
-          className="text-xl font-semibold text-center tracking-wider text-white"
+          className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold text-center tracking-wider `}
         >
           Password
         </label>
@@ -176,7 +178,7 @@ const Register = () => {
 
         <label
           htmlFor="retype-password"
-          className="text-xl font-semibold text-center tracking-wider text-white"
+          className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold text-center tracking-wider `}
         >
           Re-type Password
         </label>
@@ -205,7 +207,7 @@ const Register = () => {
           SUBMIT
         </button>
 
-        <p className="text-white">
+        <p className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold text-center tracking-wider `}>
           Already have an account?
           <Link to="/login" className="font-medium text-purple-600 hover:text-white">
             {" "}
