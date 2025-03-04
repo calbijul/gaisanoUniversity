@@ -6,7 +6,6 @@ import Register from './register';
 import './App.css';
 
 const App = () => {
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
   return (
     <Router>
       <Routes>

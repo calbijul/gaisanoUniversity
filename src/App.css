@@ -145,7 +145,7 @@
   font-weight:500;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease-in-out;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .toast-success {
@@ -166,6 +166,33 @@
   z-index: 3;
 }
 
+.dark .dark\:bg-darkPrimary {
+  background-color: #1a202c;
+}
+
+.dark .dark\:bg-darkSecondary {
+  background-color: #2d3748;
+}
+
+.dark .dark\:text-white {
+  color: white;
+}
+
+.dark .dark\:text-gray-300 {
+  color: #cbd5e0;
+}
+
+.dark .dark\:shadow-dark {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.dark .dark\:hover\:bg-darkHover:hover {
+  background-color: #4a5568;
+}
+
+.dark .dark\:border-darkBorder {
+  border-color: #4a5568;
+}
 
 
 

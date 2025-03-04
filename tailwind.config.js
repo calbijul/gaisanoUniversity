@@ -1,16 +1,16 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  darkMode: 'media',
+module.exports = {
+  darkMode: 'class',
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    
+    "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
-      
+      colors: {
+        darkPrimary: '#1a202c',
+        darkSecondary: '#2d3748',
+        darkText: '#e2e8f0',
+      }
     },
   },
   plugins: [],
 }
-
