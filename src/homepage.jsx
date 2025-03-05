@@ -134,8 +134,8 @@ const Homepage = () => {
           )}
 
 {activeView === 'settings' && (
-            <div className={`mt-10 w-full mx-auto rounded-lg shadow-md ${darkMode ? 'dark:bg-darkSecondary dark:text-white' : 'bg-white'}`}>
-              <div className="flex  py-2 px-5 justify-between rounded-lg border border-gray-600">
+            <div className={`space-y-7 mt-10 w-full mx-auto rounded-lg  ${darkMode ? 'dark:bg-darkSecondary dark:text-white' : 'bg-white'}`}>
+              <div className="flex  py-2 px-5 justify-between rounded-lg border border-gray-300">
                 <label htmlFor="Darkmode" className='font-bold pt-2'>THEME</label>
                 <button
                   onClick={toggleDarkMode}
@@ -144,6 +144,15 @@ const Homepage = () => {
                   {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
                 </button>
               </div>
+              {/* <div className="flex  py-2 px-5 justify-between rounded-lg border border-gray-300">
+                <label htmlFor="Darkmode" className='font-bold pt-2'>THEME</label>
+                <button
+                  onClick={toggleDarkMode}
+                  className={`flex p-2 rounded-lg ${darkMode ? 'bg-yellow-400 text-black' : 'bg-gray-800 text-white'}`}
+                >
+                  {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+                </button>
+              </div> */}
             </div>
           )}
         </main>
