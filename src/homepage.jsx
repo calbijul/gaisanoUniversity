@@ -120,12 +120,26 @@ const Homepage = () => {
           )}
 
           {activeView === 'settings' && (
-            <div className={`max-w-sm mx-auto rounded-lg shadow-md ${darkMode ? 'dark:bg-darkSecondary dark:text-white' : 'bg-white'}`}>
+            <div className={` max-w-sm mx-auto rounded-lg shadow-md ${darkMode ? 'dark:bg-darkSecondary dark:text-white' : 'bg-white'}`}>
               <div className="text-center p-6">
-                <h2 className="font-bold text-xl mb-4">Settings</h2>
-                <button
+                <h2 className="font-bold text-xl mb-4 pt-2">Settings</h2>
+                {/* <button
                   onClick={toggleDarkMode}
                   className={`p-2 rounded-lg ${darkMode ? 'bg-yellow-400 text-black' : 'bg-gray-800 text-white'}`}
+                >
+                  {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+                </button> */}
+              </div>
+            </div>
+          )}
+
+{activeView === 'settings' && (
+            <div className={`mt-10 w-full mx-auto rounded-lg shadow-md ${darkMode ? 'dark:bg-darkSecondary dark:text-white' : 'bg-white'}`}>
+              <div className="flex  py-2 px-5 justify-between rounded-lg border border-gray-600">
+                <label htmlFor="Darkmode" className='font-bold pt-2'>THEME</label>
+                <button
+                  onClick={toggleDarkMode}
+                  className={`flex p-2 rounded-lg ${darkMode ? 'bg-yellow-400 text-black' : 'bg-gray-800 text-white'}`}
                 >
                   {darkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
                 </button>

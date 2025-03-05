@@ -209,7 +209,7 @@ const Register = () => {
 
         <p className={`${darkMode ? 'text-white' : 'text-black'} text-xl font-semibold text-center tracking-wider `}>
           Already have an account?
-          <Link to="/login" className="font-medium text-purple-600 hover:text-white">
+          <Link to="/login" className="font-medium text-purple-600 hover:text-purple-400">
             {" "}
             Login
           </Link>
