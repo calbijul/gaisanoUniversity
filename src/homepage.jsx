@@ -58,12 +58,12 @@ const Homepage = () => {
           >
             Dashboard
           </button>
-          <button
+          {/* <button
             className={`${darkMode ? 'dark:text-white dark:hover:bg-darkHover' : 'text-black'} font-medium hover:bg-purple-600 hover:text-white py-2 px-4 rounded-lg`}
             onClick={() => handleViewChange('users')}
           >
             Users
-          </button>
+          </button> */}
           <button
             className={`${darkMode ? 'dark:text-white dark:hover:bg-darkHover' : 'text-black'} font-medium hover:bg-purple-600 hover:text-white py-2 px-4 rounded-lg`}
             onClick={() => handleViewChange('settings')}
@@ -110,14 +110,14 @@ const Homepage = () => {
             </div>
           )}
 
-          {activeView === 'users' && (
+          {/* {activeView === 'users' && (
             <div className={`max-w-sm mx-auto rounded-lg shadow-md ${darkMode ? 'dark:bg-darkSecondary dark:text-white' : 'bg-white'}`}>
               <div className="text-center p-6">
                 <h2 className="font-bold text-xl">Users</h2>
                 <p>{username}</p>
               </div>
             </div>
-          )}
+          )} */}
 
           {activeView === 'settings' && (
             <div className={` max-w-sm mx-auto rounded-lg shadow-md ${darkMode ? 'dark:bg-darkSecondary dark:text-white' : 'bg-white'}`}>
